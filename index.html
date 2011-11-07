@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Experimenting with JSON and Backbone</title>
+<script src="lib/underscore-min.js"></script>
+<script src="lib/backbone.js"></script>
+<script src="lib/jquery.js"></script>
+<script src="js/bb.js"></script>
+<style>
+.grid_1,.grid_10,.grid_5 {
+float:left;
+margin:0 10px;
+display:inline;
+}
+.grid_1 {
+width:10%;
+}
+.grid_10 {
+width:75%;
+}
+.clear {
+clear:both;
+}
+h2 {
+margin-top:0;
+margin-bottom:5px;
+}
+.post {
+padding-bottom:10px;
+}
+</style>
+</head>
+<body>
+<h1>Backbone experiments (with Reddit)</h1>
+
+<div id="posts">
+<script type="text/template" id="reddit-template">
+  <div class="post">
+    <div class="grid_1">
+      <div class="ups"><%= ups %></div>
+      <div class="downs"><%= downs %></div>
+    </div>
+    <div class="grid_1">
+
+    </div>
+    <div class="grid_10">
+      <h2><a href='http://www.reddit.com<%= permalink %>'><%= title %></a></h2>
+      <label><b><%= author %></b> on <span class="subreddit"><%= domain %></span></label>
+    </div>
+    <div class="clear"></div>
+  </div>
+</script>
+</div>
+</body>
+</html>
